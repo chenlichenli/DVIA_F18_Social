@@ -1,0 +1,106 @@
+body {
+    overflow-x: scroll;
+
+    font-family: 'Cutive Mono', monospace;
+    /* font-size: 8px; */
+    color: lightgreen;
+    background-color: black;
+}
+
+.code-map {
+    font-family: 'Courier New', Courier, monospace;
+    color: lightgreen;
+    margin-left: 2%;
+    margin-right: 2%;
+    font-size: 15px;
+}
+
+.title {
+    font-family: 'Roboto Mono', monospace;
+    /* font-family: 'Courier New', Courier, monospace; */
+    font-style: bold;
+    color: white;
+    font-size: 40px;
+    float: left;
+    margin-left: 30px;
+    margin-top: 30px;
+    position: fixed;
+    z-index: 100;
+}
+
+.btn_line {
+    position: fixed;
+    font-size: 14px;
+    top: 85px;
+    width: 30%;
+    left: 2.5%;
+    align-content: space-between;
+    /* margin: auto 5%; */
+    display: flex;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.btn_line span:hover {
+    text-decoration: underline;
+    cursor: pointer;
+    background: yellow;
+}
+
+a {
+    color: lightgreen;
+}
+
+a:hover {
+    background-color: yellow;
+}
+
+.colorcode-map {
+    font-size: 5px;
+
+}
+.code-map{
+    z-index: 1;
+}
+
+.country {
+
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    position: fixed;
+    left: 12px;
+
+
+
+}
+
+.lefttitle {
+    font-family: 'Roboto Mono', monospace;
+    top:0;
+    position: fixed;
+    height: 120vh;
+    left: 0;
+    background-color: black;
+    z-index: 10;
+    width: 180px;
+
+}
+
+.lefttitle div {
+    font-size: 15px;
+    text-anchor: end;
+    position: fixed;
+    color:white;
+}
+
+/* .shadow {
+    position: fixed;
+    height: 50vh;
+    width: 180px;
+    left: 0;
+    background-color: black;
+    z-index: 99;
+    box-shadow: 25px 0px 25px black;
+
+} */
