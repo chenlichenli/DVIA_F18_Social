@@ -1,6 +1,32 @@
 var colorcode_data;
 var colorcellsize = 15;
 var color_top = window.innerHeight * 0.75;
+
+// Responsive color code dimensions
+function getResponsiveColorDimensions() {
+    const screenWidth = window.innerWidth;
+    const screenHeight = window.innerHeight;
+    
+    // Calculate color cell size based on screen width
+    let colorcellsize;
+    if (screenWidth < 480) {
+        colorcellsize = 8; // Mobile
+    } else if (screenWidth < 768) {
+        colorcellsize = 10; // Tablet
+    } else {
+        colorcellsize = 15; // Desktop
+    }
+    
+    // Calculate color panel position
+    const color_top = Math.max(screenHeight * 0.7, 300);
+    
+    return {
+        colorcellsize: colorcellsize,
+        color_top: color_top,
+        screenWidth: screenWidth,
+        screenHeight: screenHeight
+    };
+}
 d3.csv("Color_code.csv", function (colordata) {
 
     colorcode_data = colordata;
@@ -11,10 +37,14 @@ d3.csv("Color_code.csv", function (colordata) {
 
 
 function colorRender(data) {
-
+    // Get responsive dimensions
+    const colorDimensions = getResponsiveColorDimensions();
+    colorcellsize = colorDimensions.colorcellsize;
+    color_top = colorDimensions.color_top;
+    
     var colorpannel = d3.select(".colorcode-map").append("div")
         .attr("width",
-            data.length * cellSize + 240
+            data.length * colorcellsize + 240
         )
         .attr("height", window.innerHeight)
         .attr("class", "colorcode")
