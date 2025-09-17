@@ -2,6 +2,7 @@
 
 <head>
   <title>Data Visualization</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
   <script src="//code.jquery.com/jquery-1.10.2.js"></script>
   <link href="bootstrap.css" rel="stylesheet" />
@@ -20,9 +21,9 @@
 
   </style>
   <div class="lefttitle">
-    <div style="left: 72px;  top: calc(50vh + 48px);">Nationality</div>
-    <div style="left: 36px;  top: calc(50vh + 90px);">Native language</div>
-    <div style="left: 115px;  top: calc(50vh + 130px);;">Gender</div>
+    <div class="label-nationality">Nationality</div>
+    <div class="label-language">Native language</div>
+    <div class="label-gender">Gender</div>
   </div>
 
   <!-- <div class="shadow"></div> -->
@@ -30,16 +31,16 @@
   <!-- <div class="colorcode-map"></div> -->
 
   <div class="btn_line">
-    <span onclick="selectyear(0)"> All</span>
-    <span onclick="selectyear(1800)"> 1800</span>
-    <span onclick="selectyear(1940)"> 1940</span>
-    <span onclick="selectyear(1950)"> 1950</span>
-    <span onclick="selectyear(1960)"> 1960</span>
-    <span onclick="selectyear(1970)"> 1970</span>
-    <span onclick="selectyear(1980)"> 1980</span>
-    <span onclick="selectyear(1990)"> 1990</span>
-    <span onclick="selectyear(2000)"> 2000</span>
-    <span onclick="selectyear(2010)"> 2010</span>
+    <span onclick="selectyear(0)" role="button" tabindex="0"> All</span>
+    <span onclick="selectyear(1800)" role="button" tabindex="0"> 1800</span>
+    <span onclick="selectyear(1940)" role="button" tabindex="0"> 1940</span>
+    <span onclick="selectyear(1950)" role="button" tabindex="0"> 1950</span>
+    <span onclick="selectyear(1960)" role="button" tabindex="0"> 1960</span>
+    <span onclick="selectyear(1970)" role="button" tabindex="0"> 1970</span>
+    <span onclick="selectyear(1980)" role="button" tabindex="0"> 1980</span>
+    <span onclick="selectyear(1990)" role="button" tabindex="0"> 1990</span>
+    <span onclick="selectyear(2000)" role="button" tabindex="0"> 2000</span>
+    <span onclick="selectyear(2010)" role="button" tabindex="0"> 2010</span>
   </div>
 
 
